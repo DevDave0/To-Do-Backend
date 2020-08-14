@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
         if user.valid?
             user.save 
-            render json: {user: user}
+            render json: {user: UserSerializer.new(user), token: encode_token({user_id: user.id})}
         else 
             render json: {error: "Failed to create a user"}
         end 
