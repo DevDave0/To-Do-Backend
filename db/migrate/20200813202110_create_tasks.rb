@@ -4,7 +4,7 @@ class CreateTasks < ActiveRecord::Migration[6.0]
       t.string :name 
       t.string :difficulty 
       t.integer :experience_points 
-      t.string :type
+      t.string :category
 
       t.timestamps
     end

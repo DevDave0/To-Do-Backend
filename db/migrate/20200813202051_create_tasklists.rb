@@ -4,7 +4,7 @@ class CreateTasklists < ActiveRecord::Migration[6.0]
       t.integer :user_id 
       t.integer :task_id 
       t.string :name 
-      t.string :category
+
 
       t.timestamps
     end
