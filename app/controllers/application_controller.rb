@@ -8,7 +8,19 @@ class ApplicationController < ActionController::API
 
 
     def logged_in? 
-        byebug
+
+        headers = request.headers["Authorization"]
+        token = headers.split(' ')[1]
+
+        begin
+            user_id = JWT.decode(token, 'flatiron', 'HS256')[0]["user_id"]
+            user = User.find(user_id)
+        rescue 
+            nil 
+        end 
+
+
+        render json: {error: "Please log in"} unless user
     end 
 
 end
