@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+    skip_before_action :logged_in?, only: [:create, :index]
+
     def create 
         user = User.new(user_params)
 
@@ -10,6 +12,10 @@ class UsersController < ApplicationController
             render json: {error: "Failed to create a user"}
         end 
 
+    end 
+
+    def index 
+        users = User.all 
     end 
 
 
