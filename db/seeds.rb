@@ -36,4 +36,5 @@ tasks = [
 
 tasks.each do |t| 
     Task.create(name: t[:name], difficulty: t[:difficulty], experience_points: t[:experience_points], category: t[:category])
-end 
+end
+

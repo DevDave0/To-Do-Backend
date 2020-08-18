@@ -7,4 +7,16 @@ class TasksController < ApplicationController
         render json: @tasks
     end 
 
+    def create
+        @task = Task.create(strong_params)
+        render json: @task, status: :created
+    end
+
+
+    private
+
+    def strong_params
+        params.require(:task).permit(:name, :difficulty, :experience_points, :category)
+    end
+
 end
