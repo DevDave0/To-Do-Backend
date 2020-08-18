@@ -7,6 +7,7 @@ class TasksController < ApplicationController
         render json: @tasks
     end 
 
+
     def create
         @task = Task.create(strong_params)
         render json: @task, status: :created
