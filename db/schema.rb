@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2020_08_13_202238) do
 
   create_table "boards", force: :cascade do |t|
     t.string "name"
+    t.string "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -32,7 +33,6 @@ ActiveRecord::Schema.define(version: 2020_08_13_202238) do
   create_table "tasklists", force: :cascade do |t|
     t.integer "user_id"
     t.integer "task_id"
-    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2020_08_13_202238) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "password_digest"
+    t.integer "experience_bar", default: 0
     t.string "avatar", default: "https://img.favpng.com/15/21/9/plant-green-png-favpng-qNjvxTd5cKYuGiE8fi4asQBfc.jpg"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

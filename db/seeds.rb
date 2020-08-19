@@ -1,4 +1,6 @@
 Task.destroy_all
+Tasklist.destroy_all
+User.destroy_all
 
 
 tasks = [

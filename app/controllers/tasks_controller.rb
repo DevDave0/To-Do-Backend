@@ -10,6 +10,15 @@ class TasksController < ApplicationController
 
     def create
         @task = Task.create(strong_params)
+        # @task = Task.new
+        # @task.name = params[:name]
+        # @task.difficulty = params[:difficulty]
+        # @task.experience_points = params[:experience_points]
+        # @task.category = params[:category]
+        # @task.user_id = params[:user_id]
+        # @task.save
+
+
         render json: @task, status: :created
     end
 

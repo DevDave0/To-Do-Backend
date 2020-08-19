@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :name, :avatar, :id
+  attributes :name, :avatar, :id, :experience_bar
 
   has_many :tasklists 
   has_many :tasks, through: :tasklists 
