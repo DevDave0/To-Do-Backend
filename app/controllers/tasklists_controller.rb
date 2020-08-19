@@ -1,5 +1,7 @@
 class TasklistsController < ApplicationController
 
+    skip_before_action :logged_in?, only: [:create, :index]
+
     def index 
         @tasklists = Tasklist.all 
         render json: @tasklists
