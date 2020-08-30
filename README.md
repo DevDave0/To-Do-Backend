@@ -17,4 +17,4 @@ Veni Vidi Vici is a web application that allows a user to:
 3. Ruby on Rails API with JWT Authentication
 4. Usage of React Hooks to manage state
 
-Project backend: https://github.com/DevDave0/Veni-Vidi-Vici-client
+Project frontend: https://github.com/DevDave0/Veni-Vidi-Vici-client
